@@ -1,0 +1,18 @@
+<div *ngIf="hotArray" class="row">
+  <h3>Hottest threads</h3>
+  <div *ngFor="let item of hotArray" class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title"> {{ item.title }} </span>
+        <p>
+          {{ item.content }}
+        </p>
+      </div>
+      <div class="card-action">
+        <a [routerLink]="['/forum-thread', item.id]">View</a>
+      </div>
+    </div>
+  </div>
+</div>
+<app-forum-new-thread></app-forum-new-thread>
+<app-forum-thread-list></app-forum-thread-list>

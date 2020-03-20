@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;CAAG",
+    "sources": [
+        "forum-new-thread.component.sass"
+    ],
+    "names": [],
+    "file": "forum-new-thread.component.css"
+}

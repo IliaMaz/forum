@@ -1,0 +1,33 @@
+<div class="row center-align">
+  <h4>Catalog:</h4>
+
+  <table class="highlight">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Published on</th>
+        <th>Views</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let thread of tempArr">
+        <td>
+          <a [routerLink]="['/forum-thread', thread.id]">
+            {{ thread.title }}
+          </a>
+        </td>
+        <td>
+          {{ thread.author }}
+        </td>
+        <td>
+          {{ thread.publishDate }}
+        </td>
+        <td>
+          {{ thread.views }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

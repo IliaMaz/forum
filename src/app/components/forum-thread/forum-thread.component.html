@@ -1,0 +1,48 @@
+<div class="row">
+  <div *ngIf="singleThread" class="col s12">
+    <h3>
+      {{ singleThread.title }}
+    </h3>
+    <p>
+      Category: {{ singleThread.category }} <br />
+      By: {{ singleThread.author }}
+    </p>
+    <p>{{ singleThread.content }}</p>
+    <hr />
+    <div class="replies">
+      <section *ngFor="let item of tempArr">
+        <section *ngIf="item.threadId === currentReply.threadId">
+          <p>By: {{ currentReply.author }}</p>
+          <p>{{ currentReply.reply }}</p>
+        </section>
+      </section>
+    </div>
+    <section>
+      <!-- Useless section, was gonna use a different btn then flex. -->
+      <div class="row">
+        <p>Reply:</p>
+        <div class="input-field col s6">
+          <input
+            placeholder="Name"
+            id="author"
+            [(ngModel)]="currentReply.author"
+            type="text"
+          />
+          <label for="author">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input
+            id="reply"
+            placeholder="Reply"
+            [(ngModel)]="currentReply.reply"
+            type="text"
+          />
+          <label for="reply">Reply</label>
+        </div>
+        <button (click)="addReply()" class="btn-waves-effect waves-light">
+          <i class="fas fa-plus"></i> Reply
+        </button>
+      </div>
+    </section>
+  </div>
+</div>

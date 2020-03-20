@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "forum-thread.component.sass"
+    ],
+    "names": [],
+    "file": "forum-thread.component.css"
+}
